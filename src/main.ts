@@ -61,16 +61,7 @@ lemon.on('mouseleave', () => {
     lemon.getStage()!.container().style.cursor = 'default';
 });
 
-//animation
-const period = 1000; 
-    const animation = new Konva.Animation((frame) => {
-        const scale = Math.sin((frame.time *2 * Math.PI) / period) * 0.1 + 1;
-        lemon.scale({
-            x: scale,
-            y: scale
-        });
-    }, layer);
-
+//size up
 lemon.on('mousedown', () => {
      lemon.to({
         scaleX: 1.1,
